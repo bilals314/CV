@@ -1,0 +1,350 @@
+/* ══════════════════════════════════════════════════
+         
+             CV — Academic Professional 
+   
+══════════════════════════════════════════════════ */
+
+/* ===== Root Variables ===== */
+:root {
+    --navy: #0b1c3e;
+    --navy-light: #163060;
+    --blue: #2563eb;
+    --cyan: #0891b2;
+    --white: #ffffff;
+    --off-white: #f8faff;
+    --border: #dde5f8;
+    --text-dark: #0b1c3e;
+    --text-body: #374166;
+    --text-muted: #6b7ab5;
+    --text-light: #a0aac8;
+    --green: #10b981;
+
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Nunito', sans-serif;
+    --mono: 'Fira Code', monospace;
+
+    --sidebar-w: 240px;
+    --radius: 6px;
+    --radius-lg: 10px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--sans);
+    background: #eef3ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* ===== Layout Wrapper ===== */
+.cv-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.cv-page {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--border);
+    min-height: 100vh;
+   
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    background: var(--navy);
+    color: #c8d8f5;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+    /* ADD THIS */
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-inner {
+    width: 90px;
+   
+    height: 90px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    border: 3px solid var(--blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.avatar-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    display: block;
+}
+
+.full-name {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    
+    font-weight: 600;
+    color: white;
+}
+
+.profession {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7da4e0;
+    margin-top: 6px;
+}
+
+/* Sidebar Section */
+.sb-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sb-title {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.c-row,
+.lang-row {
+    font-size: 0.9rem;
+    
+    line-height: 1.5;
+}
+
+.pill {
+    font-size: 0.8rem;
+    
+    padding: 4px 8px;
+}
+
+.pill {
+    font-size: 0.7rem;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+}
+
+.b-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.b-fill {
+    height: 100%;
+    background: var(--blue);
+}
+
+/* ================= CONTENT ================= */
+.content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+/* Hero */
+.hero-bar {
+    background: var(--blue);
+    padding: 14px 22px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Sections */
+.c-section {
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.c-section:last-child {
+    border-bottom: none;
+}
+
+.c-sec-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+/* About */
+.about-para {
+    font-size: 0.95rem;
+   
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tl-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+}
+
+.tl-role {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.tl-company {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.tl-bullets {
+    list-style: disc;
+    padding-left: 18px;
+}
+
+.tl-bullets li {
+    font-size: 0.9rem;
+    
+    line-height: 1.6;
+    color: var(--text-body);
+}
+
+/* Education */
+.edu-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+}
+
+.edu-degree {
+    font-family: var(--serif);
+    font-size: 1rem;
+   
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.edu-uni {
+    font-size: 0.9rem;
+    
+    color: var(--blue);
+    margin-bottom: 6px;
+}
+
+.edu-note {
+    font-size: 0.85rem;
+    
+    color: var(--text-body);
+}
+
+/* Projects */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.proj-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+}
+
+.proj-name {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.proj-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-body);
+}
+
+
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .cv-page {
+        border: none;
+    }
+
+    .proj-card,
+    .tl-card,
+    .edu-card {
+        break-inside: avoid;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cv-page {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-grid {
+        grid-template-columns: 1fr;
+    }
+}
